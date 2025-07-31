@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+   "prebuild": "chmod +x ./node_modules/.bin/*",
+    "build": "npm run prebuild && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "react": "^19.0.0",
